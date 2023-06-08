@@ -1,0 +1,941 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=1200">
+    <title>bluebird</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon_32x32.png">
+
+    <link rel="stylesheet" href="css/slick-theme.css"> <!--slick_css-->
+    <link rel="stylesheet" href="css/slick.css"> <!--slick_css-->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/swiper-bundle.min.css"> <!--swiper_css-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> <!--aos_css-->
+    <link rel="stylesheet" href="css/jquery-ui.css">
+
+    <script src="js/jquery-3.6.4.min.js"></script> <!--기본소스-->
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+    <script src="js/script.js"></script> <!--제어구문-->
+</head>
+<body>
+    <div id="header"> <!--header_S-->
+        <h1 class="logo">
+            <a href="index.html"><img src="images/logo.png" alt="logo"></a>
+        </h1>
+        <ul id="gnb">
+            <li><a href="javascript:return false;">회사소개</a></li>
+            <li><a href="javascript:return false;">LOCAL 커뮤니티</a></li>
+            <li><a href="javascript:return false;">여행상품</a></li>
+            <li><a href="javascript:return false;">항공권&숙소</a></li>
+            <li><a href="javascript:return false;">이벤트</a></li>
+        </ul>
+    </div> <!--header_E-->
+    <div id="banner"> <!--banner_S-->
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <a href="javascript:return false;"><img src="images/banner1.svg" alt="banner1"></a>
+            </div>
+            <div class="swiper-slide">
+                <a href="javascript:return false;"><img src="images/banner2.svg" alt="banner2"></a>
+            </div>
+            <div class="swiper-slide">
+                <a href="javascript:return false;"><img src="images/banner3.svg" alt="banner3"></a>
+            </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </div> <!--banner_E-->
+    <div id="quick_wrap"> <!--quick_S-->
+        <div id="quick">
+            <div id="quick_inner">
+                <div class="quick_title">
+                    <img src="images/quick_icon1.png" alt="quick_icon1">
+                    <p>어디로 떠나시나요<span>?</span></p> 
+                </div>
+                <ul	id="box1">
+                    <li	class="tab tablink opacity" onclick="openBoard(event,'Board01')">여행상품</li>
+                    <li	class="tab tablink" onclick="openBoard(event,'Board02')">항공권</li>
+                    <li	class="tab tablink" onclick="openBoard(event,'Board03')">숙소</li>
+                </ul>							
+                <div id="Board01" class="box1_1	board"> <!--여행상품-->
+                    <ul class="tab_detail">
+                        <li>
+                            <div class="input">
+                                <input type="search" placeholder="장소입력">
+                            </div>
+                        </li>
+                        <li>
+                            <div class="select">
+                                <input type="text" id="datepicker1" placeholder="날짜선택" class="day">
+                            </div>
+                        </li>
+                        <li><a href="javascript:return false;" class="tab_search">검색하기</a></li>
+                    </ul>						
+                </div>							
+                <div id="Board02" class="box1_1	board" style="display:none;"> <!--항공권-->
+                    <ul class="tab_detail">
+                        <li>
+                            <div class="input input_s">
+                                <input type="search" placeholder="출발지">
+                            </div>
+                            <div class="input input_e">
+                                <input type="search" placeholder="도착지">
+                            </div>
+                            <div class="input_btn">
+                                <img src="images/quick_icon2.png" alt="quick_icon2">
+                            </div>
+                        </li>
+                        <li>
+                            <div class="select">
+                                <input type="text" id="datepicker2" placeholder="날짜선택" class="day">
+                            </div>
+                        </li>
+                        <li>
+                            <div class="input input_number">
+                                <input type="number" placeholder="인원입력" min="1">
+                            </div>
+                        </li>
+                        <li><a href="javascript:return false;" class="tab_search">검색하기</a></li>
+                    </ul>		
+                </div>
+                <div id="Board03" class="box1_1	board" style="display:none;"> <!--숙소-->
+                    <ul class="tab_detail">
+                        <li>
+                            <div class="input">
+                                <input type="search" placeholder="장소입력">
+                            </div>
+                        </li>
+                        <li>
+                            <div class="select">
+                                <input type="text" id="datepicker3" placeholder="날짜선택" class="day">
+                            </div>
+                        </li>
+                        <li>
+                            <div class="input input_number">
+                                <input type="number" placeholder="인원입력" min="1">
+                            </div>
+                        </li>
+                        <li><a href="javascript:return false;" class="tab_search">검색하기</a></li>
+                    </ul>		
+                </div>
+            </div>
+        </div>
+    </div> <!--quick_E-->
+    <div id="bg_white"> <!--bg_white_S-->
+        <img src="images/bg_white.svg" alt="bg_white">
+    </div> <!--bg_white_E-->
+    <div id="section1"> <!--section1_S-->
+        <p class="title">
+            인기 급상승
+            <span class="title_add">여행지</span>
+        </p>
+        <div data-aos="fade-up" data-aos-duration="1000">
+            <ul>
+                <li> <!--top1-->
+                    <a href="javascript:return false;">
+                        <div class="top">
+                            <div class="top_hover">
+                                <img src="images/section1_top_hover.svg" alt="top_hover">
+                                <div class="top_txt">
+                                    <p>
+                                        프랑스 / 파리
+                                        <span>파리 당일치기 박물관투어</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="img_position">
+                                <div class="img_cover">
+                                    <div class="img_wrap">
+                                        <img src="images/section1_top1.svg" alt="top1">
+                                    </div>
+                                    <div class="cover">
+                                        <p>TOP 1</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li> <!--top2-->
+                    <a href="javascript:return false;">
+                        <div class="top">
+                            <div class="top_hover">
+                                <img src="images/section1_top_hover.svg" alt="top_hover">
+                                <div class="top_txt">
+                                    <p>
+                                        스위스 / 인터라켄
+                                        <span>스위스 액티비티 풀코스</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="img_position">
+                                <div class="img_cover">
+                                    <div class="img_wrap">
+                                        <img src="images/section1_top2.svg" alt="top2">
+                                    </div>
+                                    <div class="cover">
+                                        <p>TOP 2</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li> <!--top3-->
+                    <a href="javascript:return false;">
+                        <div class="top">
+                            <div class="top_hover">
+                                <img src="images/section1_top_hover.svg" alt="top_hover">
+                                <div class="top_txt">
+                                    <p>
+                                        일본 / 도쿄
+                                        <span>도쿄 시내부터 후지산까지</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="img_position">
+                                <div class="img_cover">
+                                    <div class="img_wrap">
+                                        <img src="images/section1_top3.svg" alt="top3">
+                                    </div>
+                                    <div class="cover">
+                                        <p>TOP 3</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li> <!--top4-->
+                    <a href="javascript:return false;">
+                        <div class="top">
+                            <div class="top_hover">
+                                <img src="images/section1_top_hover.svg" alt="top_hover">
+                                <div class="top_txt">
+                                    <p>
+                                        스위스 / 취리히
+                                        <span>취리히 1박2일 시티투어</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="img_position">
+                                <div class="img_cover">
+                                    <div class="img_wrap">
+                                        <img src="images/section1_top4.svg" alt="top4">
+                                    </div>
+                                    <div class="cover">
+                                        <p>TOP 4</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li> <!--top5-->
+                    <a href="javascript:return false;">
+                        <div class="top">
+                            <div class="top_hover">
+                                <img src="images/section1_top_hover.svg" alt="top_hover">
+                                <div class="top_txt">
+                                    <p>
+                                        한국 / 제주도
+                                        <span>제주도 2박3일 드라이브</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="img_position">
+                                <div class="img_cover">
+                                    <div class="img_wrap">
+                                        <img src="images/section1_top5.svg" alt="top5">
+                                    </div>
+                                    <div class="cover">
+                                        <p>TOP 5</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div> <!--section1_E-->
+    <div id="section2_3_wrap"> <!--section2_3_wrap_S-->
+        <div id="section2"> <!--section2_S-->
+            <p class="title">
+                항공권 예약
+            </p>
+            <div class="section2_float">
+                <div data-aos="fade-up-right" data-aos-duration="1000">
+                    <div class="section2_left">
+                        <div class="section2_quick">
+                            <ul>
+                                <li> <!--from-->
+                                    <div class="input">
+                                        <p>FROM</p>
+                                        <input type="search" placeholder="ICN(인천)">
+                                    </div>
+                                </li>
+                                <li> <!--to-->
+                                    <div class="input">
+                                        <p>TO</p>
+                                        <input type="search" placeholder="어디로 떠나시나요?" class="input_color">
+                                    </div>
+                                </li>
+                                <li> <!--date-->
+                                    <div class="input">
+                                        <p>DATE</p>
+                                        <input type="text" id="datepicker4" placeholder="2023-05-06" class="day">
+                                        <input type="text" id="datepicker5" placeholder="2023-05-15" class="day day2">
+                                        <span>~</span>
+                                    </div>
+                                </li>
+                                <li> <!--number-->
+                                    <div class="input input_number">
+                                        <p>number of people</p>
+                                        <input type="number" placeholder="1" min="1">
+                                    </div>
+                                </li>
+                            </ul>
+                            <a href="javascript:return false;" class="section2_search">검색</a>
+                            <div class="section2_icon2">
+                                <img src="images/section2_icon2.png" alt="section2_icon2">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div data-aos="fade-up-left" data-aos-duration="1000">
+                    <div class="section2_right">
+                        <ul class="line1">
+                            <li>
+                                <a href="javascript:return false;">
+                                    <div class="big_box">
+                                        <p class="big_title">
+                                            ICN(인천) ↔ KIX(칸사이) <br>
+                                            왕복 항공권
+                                        </p>
+                                        <p class="big_tag">
+                                            #빠른 출발 <span>#카드사별 할인</span>
+                                        </p>
+                                        <p class="big_price">
+                                            280,000 <span>원~</span>
+                                        </p>
+                                        <div class="line1_icon">
+                                            <img src="images/section2_icon3.png" alt="section2_icon3">
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:return false;">
+                                    <div class="mini_box">
+                                        <p class="mini_title">
+                                            (ICN)인천 <br>
+                                            ↔ <br>
+                                            (괌 A,B 원팟)괌
+                                        </p>
+                                        <p class="mini_price">
+                                            370,000 <span>원~</span>
+                                        </p>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="line2">
+                            <li>
+                                <a href="javascript:return false;">
+                                    <div class="mini_box">
+                                        <p class="mini_title">
+                                            (ICN)인천 <br>
+                                            ↔ <br>
+                                            (CDG)파리
+                                        </p>
+                                        <p class="mini_price">
+                                            1,472,800 <span>원~</span>
+                                        </p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:return false;">
+                                    <div class="mini_box">
+                                        <p class="mini_title">
+                                            (ICN)인천 <br>
+                                            ↔ <br>
+                                            (LHR)런던
+                                        </p>
+                                        <p class="mini_price">
+                                            1,490,200 <span>원~</span>
+                                        </p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:return false;">
+                                    <div class="mini_box">
+                                        <p class="mini_title">
+                                            (ICN)인천 <br>
+                                            ↔ <br>
+                                            (KKIA)코타키나발루
+                                        </p>
+                                        <p class="mini_price">
+                                            375,000 <span>원~</span>
+                                        </p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:return false;">
+                                    <div class="mini_box">
+                                        <p class="mini_title">
+                                            (ICN)인천 <br>
+                                            ↔ <br>
+                                            (LAX)로스앤젤레스
+                                        </p>
+                                        <p class="mini_price">
+                                            1,315,000 <span>원~</span>
+                                        </p>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="line3">
+                            <li>
+                                <a href="javascript:return false;">
+                                    <div class="mini_box">
+                                        <p class="mini_title">
+                                            (PUS)부산 <br>
+                                            ↔ <br>
+                                            (NAR)도쿄
+                                        </p>
+                                        <p class="mini_price">
+                                            350,000 <span>원~</span>
+                                        </p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:return false;">
+                                    <div class="mini_box">
+                                        <p class="mini_title">
+                                            (ICN)인천 <br>
+                                            ↔ <br>
+                                            (ICAO)하와이
+                                        </p>
+                                        <p class="mini_price">
+                                            1,065,200 <span>원~</span>
+                                        </p>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                        <a href="javascript:return false;" class="section2_more">click to more views</a>
+                    </div>
+                </div>
+            </div>
+        </div> <!--section2_E-->
+        <div id="section3"> <!--section3_S-->
+            <p class="title">
+                이달의
+                <span class="title_color">best</span>
+                <span class="title_add">여행상품</span>
+            </p>
+        </div> <!--section3_E-->
+        <div class="product_wrap"> <!--product_S-->
+            <div class="product">
+                <div class="swiper1_wrap">
+                    <div class="swiper1">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="product_img">
+                                    <img src="images/section3_product1.svg" alt="product1">
+                                </div>
+                                <div class="product_txt">
+                                    [프랑스/파리] 에펠탑부터 시작하는 파리 건축물 1일 투어
+                                    <a href="javascript:return false;">
+                                        + more
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="product_img">
+                                    <img src="images/section3_product2.svg" alt="product2">
+                                </div>
+                                <div class="product_txt">
+                                    [북유럽] 북유럽 휴양여행 7일 투어
+                                    <a href="javascript:return false;">
+                                        + more
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="product_img">
+                                    <img src="images/section3_product3.svg" alt="product3">
+                                </div>
+                                <div class="product_txt">
+                                    [캐나다/옐로나이프] 오로라빌리지 2박3일 일정
+                                    <a href="javascript:return false;">
+                                        + more
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="product_img">
+                                    <img src="images/section3_product4.svg" alt="product4">
+                                </div>
+                                <div class="product_txt">
+                                    [대만] 청춘영화 감성, 예스진지 투어
+                                    <a href="javascript:return false;">
+                                        + more
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="product_img">
+                                    <img src="images/section3_product5.svg" alt="product5">
+                                </div>
+                                <div class="product_txt">
+                                    [하와이] 하와이에서의 오션뷰 호캉스
+                                    <a href="javascript:return false;">
+                                        + more
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="product_img">
+                                    <img src="images/section3_product6.svg" alt="product6">
+                                </div>
+                                <div class="product_txt">
+                                    [일본/오사카] 오사카 출발 ~ 교토까지, 3박4일 투어
+                                    <a href="javascript:return false;">
+                                        + more
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="product_img">
+                                    <img src="images/section3_product7.svg" alt="product7">
+                                </div>
+                                <div class="product_txt">
+                                    [호주/시드니] 도시와 자연이 공존하는 여행지, 시드니 7일 투어
+                                    <a href="javascript:return false;">
+                                        + more
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="product_img">
+                                    <img src="images/section3_product8.svg" alt="product8">
+                                </div>
+                                <div class="product_txt">
+                                    [미국/알래스카] 신비의 땅, 알래스카 빙하관광 투어
+                                    <a href="javascript:return false;">
+                                        + more
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="product_img">
+                                    <img src="images/section3_product9.svg" alt="product9">
+                                </div>
+                                <div class="product_txt">
+                                    [몽골] 게르 숙박, 승마 체험, 은하수까지 몽골 4박 6일 투어           
+                                    <a href="javascript:return false;">
+                                        + more
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="product_img">
+                                    <img src="images/section3_product10.svg" alt="product10">
+                                </div>
+                                <div class="product_txt">
+                                    [라오스] 동남아 인기 여행지, 라오스에서 평화로운 매력 느끼기
+                                    <a href="javascript:return false;">
+                                        + more
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="product_img">
+                                    <img src="images/section3_product11.svg" alt="product11">
+                                </div>
+                                <div class="product_txt">
+                                    [스위스/그린델바트] 패러글라이딩부터 짚라인까지, 액티비티 총집합
+                                    <a href="javascript:return false;">
+                                        + more
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="product_img">
+                                    <img src="images/section3_product12.svg" alt="product12">
+                                </div>
+                                <div class="product_txt">
+                                    [스페인/세고비아] 스페인 식도락 여행
+                                    <a href="javascript:return false;">
+                                        + more
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="product_img">
+                                    <img src="images/section3_product13.svg" alt="product13">
+                                </div>
+                                <div class="product_txt">
+                                    [미국] 미서부 9박 10일 투어
+                                    <a href="javascript:return false;">
+                                        + more
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-button-next">
+                            <img src="images/section3_icon2.png" alt="section3_icon2">
+                        </div>
+                        <div class="swiper-button-prev">
+                            <img src="images/section3_icon3.png" alt="section3_icon3">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> <!--product_E-->
+        <div class="txt_flow">
+            <div class="animated-title">
+                <div class="track1">
+                    <div class="content">
+                        travel other place, find other happiness<span>travel other place, find other happiness</span><span>travel other place, find other happiness</span><span>travel other place, find other happiness</span><span>travel other place, find other happiness</span><span>travel other place, find other happiness</span><span>travel other place, find other happiness</span><span>travel other place, find other happiness</span><span>travel other place, find other happiness</span><span>travel other place, find other happiness</span><span>travel other place, find other happiness</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> <!--section2_3_wrap_E-->
+    <div id="section4"> <!--section4_S-->
+        <p class="title">
+            LOCAL 커뮤니티
+        </p>
+        <div class="local_category">
+            <div data-aos="fade-up" data-aos-duration="1000">
+                <div class="local_position local_attraction"> <!--attraction-->
+                    <a href="javascript:return false;">
+                        <div class="local_img_wrap">
+                            <img src="images/section4_attraction.svg" alt="attraction">
+                        </div>
+                        <p class="section4_more">click to more views</p>
+                        <div class="more_line"></div>
+                    </a>
+                    <p class="local_title">
+                        LOCAL 명소
+                        <span>내 주변 3,563개의 후기</span>
+                    </p>
+                </div>
+            </div>
+            <div data-aos="fade-up" data-aos-duration="1000">
+                <div class="local_position local_restaurant"> <!--restaurant-->
+                    <a href="javascript:return false;">
+                        <div class="local_img_wrap">
+                            <img src="images/section4_restaurant.svg" alt="restaurant">
+                        </div>
+                        <p class="section4_more">click to more views</p>
+                        <div class="more_line"></div>
+                    </a>
+                    <p class="local_title">
+                        LOCAL 맛집
+                        <span>내 주변 2,841개의 후기</span>
+                    </p>
+                </div>
+            </div>
+            <div data-aos="fade-up" data-aos-duration="1000">
+                <div class="local_position local_cafe"> <!--cafe-->
+                    <a href="javascript:return false;">
+                        <div class="local_img_wrap">
+                            <img src="images/section4_cafe.svg" alt="cafe">
+                        </div>
+                        <p class="section4_more">click to more views</p>
+                        <div class="more_line"></div>
+                    </a>
+                    <p class="local_title">
+                        LOCAL 카페
+                        <span>내 주변 2,594개의 후기</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="local_best">
+            <p class="best_title">
+                Today's <span>best review</span>
+            </p>
+            <div class="best_content">
+                <div data-aos="zoom-in" data-aos-duration="1000">
+                    <div class="best_img">
+                        <img src="images/section4_best.svg" alt="best">
+                    </div>
+                </div>
+                <div class="best_txt">
+                    <p class="post_title">[현지인 추천] 친구들과 주말마다 파리에서 방문하는 곳</p>
+                    <div class="profile">
+                        <div class="profile_img">
+                            <img src="images/section4_icon3.png" alt="profile">
+                        </div>
+                        <p class="profile_name">
+                            <span>Sumin</span> traveler
+                        </p>
+                        <p class="profile_country">
+                            국적 : <span>FRANCE</span>
+                        </p>
+                        <p class="profile_country">
+                            거주지 : <span>FRANCE</span>
+                        </p>
+                    </div>
+                    <div class="post_content">
+                        <p>
+                            안녕하세요! 오랜만에 포스팅으로 찾아뵈네요 :) <br>
+                            오늘은 파리에서 주말마다 방문하는 곳을 소개해드릴려고 해요! 주말이 되면 <br>
+                            대학교 친구들과 쉬러 가는 곳인데요, 'Parc Montsouris'라는 공원을 아시나요?
+                        </p>
+                        <p>
+                            몽마르뜨와 가까운 거리에 있는 공원으로, 규모도 큰 편이라 <br>
+                            친구들은 물론 가족 단위로도 많이 방문하는 곳이예요!
+                        </p>
+                        <p>
+                            이 공원은 1869년 나폴레옹 3세 시기에 세워졌고, <br>
+                            파리의 수석 조경가인 장 샤를 알판드에 의해 설계되었어요. <br>
+                            자연 그대로의 풍경에 최대한 초점을 맞춘 낭만적인 스타일의 공원이예요.
+                        </p>
+                        <a href="javascript:return false;">+ more</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="review_more">
+            <a href="javascript:return false;" class="review_click">click to more views</a>
+            <div class="review_line"></div>
+        </div>
+    </div> <!--section4_E-->
+    <div id="section5"> <!--section5_S-->
+        <p class="title">
+            이달의 이벤트
+        </p>
+        <div class="event">
+              <section class="regular slider">
+                <div>
+                  <img src="images/section5_event1.svg">
+                </div>
+                <div>
+                  <img src="images/section5_event2.svg">
+                </div>
+                <div>
+                  <img src="images/section5_event3.svg">
+                </div>
+                <div>
+                  <img src="images/section5_event4.svg">
+                </div>
+              </section>
+        </div>
+    </div> <!--section5_E-->
+    <div id="app_banner"> <!--app_banner_S-->
+        <div class="app_wrap">
+            <div class="app_position">
+                <a href="javascript:return false;"><img src="images/googleplay.png" alt="googleplay"></a>
+                <a href="javascript:return false;"><img src="images/appstore.png" alt="appstore"></a>
+            </div>
+        </div>
+    </div>
+    <div class="txt_flow txt_flow2">
+        <div class="animated-title">
+            <div class="track1">
+                <div class="content">
+                    bluebird l wherever you go<span>bluebird l wherever you go</span><span>bluebird l wherever you go</span><span>bluebird l wherever you go</span><span>bluebird l wherever you go</span><span>bluebird l wherever you go</span><span>bluebird l wherever you go</span><span>bluebird l wherever you go</span><span>bluebird l wherever you go</span><span>bluebird l wherever you go</span><span>bluebird l wherever you go</span><span>bluebird l wherever you go</span><span>bluebird l wherever you go</span><span>bluebird l wherever you go</span><span>bluebird l wherever you go</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="footer"> <!--footer_S-->
+        <div class="notice_sns_wrap">
+            <div class="notice_sns">
+                <div class="notice">
+                    <p class="notice_title">공지</p> 
+                    <div class="notice_active">
+                        <div id="slide_wrap">
+                            <div class="swiper mySwiper2">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide"><a href="javascript:return false;">블루버드X카카오페이 캐시백</a></div>
+                                    <div class="swiper-slide"><a href="javascript:return false;">이달의 베스트 리뷰어 발표</a></div>
+                                    <div class="swiper-slide"><a href="javascript:return false;">블루버드X현대카드 결제혜택</a></div>
+                                    <div class="swiper-slide"><a href="javascript:return false;">가정의 달 맞이 할인쿠폰 증정</a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="javascript:return false;" class="notice_underline">더보기</a>
+                </div>
+                <ul class="sns">
+                    <li><a href="javascript:return false;"><img src="images/footer_sns_facebook.png" alt="facebook"></a></li>
+                    <li><a href="javascript:return false;"><img src="images/footer_sns_insta.png" alt="insta"></a></li>
+                    <li><a href="javascript:return false;"><img src="images/footer_sns_youtube.png" alt="youtube"></a></li>
+                    <li><a href="javascript:return false;"><img src="images/footer_sns_kakao.png" alt="kakao"></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="etc">
+            <a href="javascript:return false;">회사소개</a>   ㅣ   <a href="javascript:return false;">개인정보처리방침</a>   ㅣ   <a href="javascript:return false;">이용약관</a>  ㅣ   <a href="javascript:return false;">여행약관</a>   ㅣ   <a href="javascript:return false;">여행자보험</a>   ㅣ   <a href="javascript:return false;">마케팅제휴</a> <br>
+            (주)블루버드   ㅣ    대표 : 정수민   ㅣ   주소 : 서울시 성동구 뚝섬로 273, 블루버드 빌딩 <br>
+            사업자등록번호 : 114-01-29440   ㅣ   관광사업자등록증번호 제 2023-000005호   ㅣ   통신판매업신고번호 : 뚝섬로01-1705호 <br>
+            영업배상책임보험가입 총 25억원   ㅣ   한국관광협회중앙회 여행공제회 공제영업보증가입 15억원   ㅣ   공제기획여행보증가입 10억원 <br>
+            고객센터 : 1577-0506   ㅣ   팩스 : 02-6552-1650   ㅣ   이메일 : 15770506@bluebird.com <br>
+            <span>COPYRIGHTⓒ BLUEBIRD SERVICE INC. ALL RIGHTS RESERVED</span>
+        </div>
+    </div> <!--footer_E-->
+
+    <!--swiper_js-->
+
+    <!--banner-->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            loop: true,
+            autoplay: {
+                    delay: 2500,
+                    disableOnInteraction: false,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            }
+        });
+    </script>
+
+    <!--달력-->
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+        $(function(){
+            $("#datepicker1").datepicker();
+        });
+        $.datepicker.setDefaults({
+            dateFormat: 'yy-mm-dd' //Input Display Format 변경
+        });
+        $.datepicker.setDefaults({
+            monthNamesShort: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'] //달력의 월 부분 텍스트
+            , monthNames: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'] //달력의 월 부분 Tooltip 텍스트
+            , dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'] //달력의 요일 부분 텍스트
+            , dayNames: ['일요일', '월요일', '화요일', '수요일', '목요일', '금요일', '토요일'] //달력의 요일 부분 Tooltip 텍스트
+        });
+        $(function(){
+            $("#datepicker2").datepicker();
+        });
+        $.datepicker.setDefaults({
+            dateFormat: 'yy-mm-dd' //Input Display Format 변경
+        });
+        $.datepicker.setDefaults({
+            monthNamesShort: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'] //달력의 월 부분 텍스트
+            , monthNames: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'] //달력의 월 부분 Tooltip 텍스트
+            , dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'] //달력의 요일 부분 텍스트
+            , dayNames: ['일요일', '월요일', '화요일', '수요일', '목요일', '금요일', '토요일'] //달력의 요일 부분 Tooltip 텍스트
+        });
+        $(function(){
+            $("#datepicker3").datepicker();
+        });
+        $.datepicker.setDefaults({
+            dateFormat: 'yy-mm-dd' //Input Display Format 변경
+        });
+        $.datepicker.setDefaults({
+            monthNamesShort: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'] //달력의 월 부분 텍스트
+            , monthNames: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'] //달력의 월 부분 Tooltip 텍스트
+            , dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'] //달력의 요일 부분 텍스트
+            , dayNames: ['일요일', '월요일', '화요일', '수요일', '목요일', '금요일', '토요일'] //달력의 요일 부분 Tooltip 텍스트
+        });
+        $(function(){
+            $("#datepicker4").datepicker();
+        });
+        $.datepicker.setDefaults({
+            dateFormat: 'yy-mm-dd' //Input Display Format 변경
+        });
+        $.datepicker.setDefaults({
+            monthNamesShort: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'] //달력의 월 부분 텍스트
+            , monthNames: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'] //달력의 월 부분 Tooltip 텍스트
+            , dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'] //달력의 요일 부분 텍스트
+            , dayNames: ['일요일', '월요일', '화요일', '수요일', '목요일', '금요일', '토요일'] //달력의 요일 부분 Tooltip 텍스트
+        });
+        $(function(){
+            $("#datepicker5").datepicker();
+        });
+        $.datepicker.setDefaults({
+            dateFormat: 'yy-mm-dd' //Input Display Format 변경
+        });
+        $.datepicker.setDefaults({
+            monthNamesShort: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'] //달력의 월 부분 텍스트
+            , monthNames: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'] //달력의 월 부분 Tooltip 텍스트
+            , dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'] //달력의 요일 부분 텍스트
+            , dayNames: ['일요일', '월요일', '화요일', '수요일', '목요일', '금요일', '토요일'] //달력의 요일 부분 Tooltip 텍스트
+        });
+    </script>
+
+    <!--product-->
+    <script>
+        var swiper = new Swiper('.swiper1', {
+          loop: true,
+          autoplay: {
+                    delay: 2000,
+                    disableOnInteraction: false,
+                },
+          spaceBetween: 40,
+          slidesPerView: 4,
+          direction: getDirection(),
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          },
+          on: {
+            resize: function () {
+              swiper.changeDirection(getDirection());
+            },
+          },
+        });
+        function getDirection() {
+          var windowWidth = window.innerWidth;
+          var direction = window.innerWidth <= 760 ? 'vertical' : 'horizontal';
+          return direction;
+        }
+      </script>
+
+    <!--event-->
+    <script src="js/slick.js"></script>
+    <script type="text/javascript">
+        $(document).on('ready', function() {
+            $(".regular").slick({
+                dots: true,
+                infinite: true,
+                slidesToShow: 2,
+                slidesToScroll: 2,
+                autoplay: true, 
+	            autoplaySpeed: 2000, 
+            });
+        });
+    </script>
+
+    <!--aos-->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+    <!--notice-->
+    <script>
+        var swiper = new Swiper(".mySwiper2", {
+          direction: "vertical",
+          slidesPerView: 1,
+          spaceBetween: 30,
+          autoplay: {     //자동슬라이드 (false-비활성화)
+                delay: 2500, // 시간 설정
+                disableOnInteraction: false, // false-스와이프 후 자동 재생
+              },
+              loop : true,   // 슬라이드 반복 여부
+              loopAdditionalSlides : 1
+        });
+      </script>
+</body>
+</html>

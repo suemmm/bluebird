@@ -1,0 +1,101 @@
+@charset "UTF-8";
+@font-face {
+    font-family: 'NEXON Lv2 Gothic';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv2 Gothic.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+#footer{
+    background-color: #17B7D0;
+    height: 333px;
+    font-family: 'NEXON Lv2 Gothic';
+    font-size: 14px;
+    color: #fff;
+}
+.notice_sns_wrap{
+    height: 50px;
+    border-top: solid 1px #fff;
+    border-bottom: solid 3px #fff;
+    position: relative;
+}
+.notice_sns{
+    margin: 0 auto;
+    width: 1200px;
+    padding-top: 16px;
+    box-sizing: border-box;
+}
+.notice{
+    float: left;
+}
+.notice_title{
+    float: left;
+    font-size: 18px;
+    font-weight: 900;
+}
+.notice a{
+    display: inline-block;
+    color: #fff;
+}
+.notice_active{
+    margin: 0 38px;
+    float: left;
+}
+.notice_active a:hover{
+    font-weight: 600;
+}
+.notice_underline{
+    text-decoration: underline;
+}
+.notice_underline:hover{
+    font-weight: 600;
+}
+
+#slide_wrap{
+    height: 50px;
+}
+.swiper{
+    width: 100%;
+    height: 100%;
+}
+.swiper-slide{
+    text-align: center;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sns{
+    float: right;
+    margin-top: -7px;
+}
+.sns li{
+    float: left;
+    margin-left: 10px;
+    opacity: 0.5;
+}
+.sns li:hover{
+    opacity: 1;
+}
+.etc{
+    background: url(../images/footer_logo.png) no-repeat right top 45px;
+    height: 247px;
+    margin: 0 auto;
+    width: 1200px;
+    padding-top: 35px;
+    line-height: 30px;
+    box-sizing: border-box;
+}
+.etc span{
+    display: block;
+    font-weight: 600;
+    margin-top: 30px;
+}
+.etc a{
+    display: inline-block;
+    color: #fff;
+}
+.etc a:hover{
+    font-weight: 600;
+}

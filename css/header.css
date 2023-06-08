@@ -1,0 +1,35 @@
+@charset "UTF-8";
+@font-face {
+    font-family: 'NEXON Lv2 Gothic';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv2 Gothic.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+#header{
+    margin: 0 auto;
+    width: 1200px;
+    height: 70px;
+}
+.logo{
+    float: left;
+    padding-top: 18px;
+}
+#gnb{
+    float: right;
+    padding-top: 25px;
+    overflow: hidden;
+}
+#gnb li{
+    float: left;
+}
+#gnb li a{
+    display: block;
+    font-size: 17px;
+    font-weight: 900;
+    color: #17B7D0;
+    margin-left: 55px;
+}
+#gnb li a:hover{
+    color: #AAAAAA;
+}
