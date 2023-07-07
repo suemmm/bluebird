@@ -1,0 +1,437 @@
+@charset "UTF-8";
+@font-face {
+    font-family: 'NEXON Lv1 Gothic OTF';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'NEXON Lv2 Gothic';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv2 Gothic.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+ul, ol{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: #343434;
+}
+body{
+    min-width: 1260px;
+    font-family: 'NEXON Lv1 Gothic OTF';
+    font-size: 14px;
+    line-height: 1.5em;
+    color: #343434;
+}
+
+/*cate*/
+.sub_cate{
+	background-repeat: no-repeat;
+	background-position: center;
+	height: 430px;
+	text-align: center;
+}
+.sub4_cate{
+	background-image: url(../images/sub4_cate_bg.svg);
+}
+.sub_cate p{
+	font-size: 42px;
+	font-weight: 900;
+	color: #fff;
+	display: inline-block;
+}
+.vertical_m{
+	display: inline-block;
+	height: 430px;
+	vertical-align: middle;
+}
+
+/*section1*/
+#sub4_section1_wrap{
+	background: url(../images/sub4_section1_bg.svg) no-repeat center bottom;
+	height: 680px;
+}
+#sub4_section1{
+	position: relative;
+}
+.sub_section{
+	margin: 0 auto;
+	width: 1200px;
+	text-align: center;
+	color: #707070;
+}
+.sub_title{
+	font-size: 24px;
+	font-weight: 900;
+	padding-top: 130px;
+	color: #343434;
+}
+.sub_title span{
+	color: #17B7D0;
+}
+.sub_title_underline{
+	background-color: #17B7D0;
+	width: 60px;
+	height: 5px;
+	border-radius: 50px;
+	display: inline-block;
+	margin-top: 15px;
+}
+
+.airline_form{
+    margin: 0 auto;
+    width: 962px;
+	/* height: 246px; */
+    padding-top: 169px;
+    box-sizing: border-box;
+	position: relative;
+}
+.airline_form li{
+	float: left;
+}
+.airline_form p{
+	font-size: 17px;
+	color: #17B7D0;
+	position: absolute;
+	top: 13px;
+	left: 15px;
+}
+.airline_form li .input{
+	width: 470px;
+	height: 74px;
+    background-color: #fff;
+	margin-right: 22px;
+	margin-bottom: 17px;
+	position: relative;
+}
+.airline_form li:nth-child(2) .input{
+    margin-right: 0;
+}
+.airline_form li:nth-child(3) .input{
+    margin-bottom: 0;
+}
+.airline_form li:nth-child(4) .input{
+    margin-right: 0;
+    margin-bottom: 0;
+}
+.airline_form .input input{
+	width: 440px;
+    font-family: 'NEXON Lv1 Gothic OTF';
+	font-size: 23px;
+	font-weight: 900;
+	position: absolute;
+	top: 37px;
+	left: 15px;
+    border: none;
+	outline: none;
+}
+.airline_form .input input::placeholder{
+	color: #A5A5A5 ;
+}
+.airline_form li:nth-child(2) .input .input_color::placeholder{
+	color: #707070;
+}
+.airline_form .input .day{
+	width: 130px;
+}
+.airline_form .input .day2{
+	position: absolute;
+	left: 165px;
+}
+.airline_form li:nth-child(3) .input span{
+    font-size: 23px;
+	font-weight: 900;
+	color: #A5A5A5;
+	position: absolute;
+	top: 40px;
+	left: 147px;
+}
+.airline_search{
+	font-size: 22px;
+	color: #fff;
+	background-color: #17B7D0;
+	display: inline-block;
+	width: 170px;
+	height: 56px;
+	text-align: center;
+    padding-top: 17px;
+	box-sizing: border-box;
+    clear: both;
+    margin-top: 25px;
+}
+.section1_icon{
+	position: absolute;
+	top: 360px;
+	left: 578px;
+	z-index: 9;
+	cursor: pointer;
+}
+/* x없애기, IE의 경우 */
+input::-ms-clear,
+input::-ms-reveal{
+    display:none;
+}
+/* x없애기, 크롬의 경우 */
+input::-webkit-search-decoration,
+input::-webkit-search-cancel-button,
+input::-webkit-search-results-button,
+input::-webkit-search-results-decoration{
+    display:none;
+}
+
+/*txt_flow*/
+.txt_flow{
+	background-color: #28B9AD;
+	height: 46px;
+	overflow: hidden;
+}
+.txt_flow2{
+	background-color: #17B7D0;
+}
+.animated-title {
+	font-family: 'NEXON Lv2 Gothic';
+	font-size: 18px;
+	color: #fff;
+	padding-top: 5px;
+	position: relative;
+}
+.animated-title .track1 {
+	position: absolute;
+	top: 0;
+
+	white-space: nowrap;
+	will-change: transform;
+	animation: marquee1 40s linear infinite;
+}
+.animated-title .track1 .content{
+	padding-top: 12px;
+	box-sizing: border-box;
+}
+.animated-title .track1 .content span{
+	margin-left: 50px;
+}
+@keyframes marquee1 {
+	from {
+		transform: translateX(-50%);
+	}
+	to {
+		 transform: translateX(0);
+	}
+}
+@media (hover: hover) and (min-width: 700px) {
+	.animated-title .content {
+		-webkit-transform: translateY(calc(100% - 8rem));
+		transform: translateY(calc(100% - 2rem));
+	   
+	}
+}
+
+/*section2*/
+#sub4_section2_wrap{
+	height: 893px;
+	border-bottom: 1.5px solid #979696;
+}
+#sub4_section2{
+	color: #17B7D0;
+	font-family: 'NEXON Lv2 Gothic';
+}
+#sub4_section2 p{
+	font-size: 20px;
+	padding-top: 122px;
+}
+#sub4_section2 p span{
+	font-family: 'NEXON Lv1 Gothic OTF';
+	font-size: 35px;
+	font-weight: 900;
+	display: block;
+	padding-top: 15px;
+}
+#sub4_section2 .swiper-wrapper{
+	margin: 75px auto;
+	width: 993px;
+}
+.md_box{
+	float: left;
+	position: relative;
+}
+.md_img{
+	width: 300px;
+	height: 300px;
+	overflow: hidden;
+}
+.md_img img{
+	transition: transform 0.5s;
+}
+.md_img img:hover{
+	transform: scale(1.1);
+}
+.margin46{
+	margin: 0 46px;
+}
+.md_txt{
+	width: 300px;
+	height: 130px;
+	font-size: 22px;
+	line-height: 26px;
+	color: #17B7D0;
+	text-align: left;
+	padding: 20px;
+	box-sizing: border-box;
+	border: 1.5px solid #17B7D0;
+	border-top: none;
+}
+.price{
+	display: block;
+	font-size: 25px;
+	font-weight: 900;
+	text-align: right;
+	padding-top: 10px;
+}
+.pick_icon{
+	position: absolute;
+	top: -44px;
+	left: -34px;
+	z-index: 9;
+}
+.pick_txt{
+	position: absolute;
+	top: -12px;
+	left: -10px;
+	z-index: 10;
+	font-size: 15px;
+	font-weight: 900;
+	color: #fff;
+}
+.swiper_btn{
+	padding-top: 105px;
+}
+
+/*section3*/
+#sub4_section3{
+	height: 885px;
+}
+.hotel{
+	margin-top: 65px;
+	width: 460px;
+	height: 513px;
+	box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.16);
+	float: left;
+}
+.hotel_img{
+	height: 370px;
+}
+.hotel_txt{
+	height: 143px;
+	font-family: 'NEXON Lv2 Gothic';
+	color: #17B7D0;
+	text-align: left;
+	padding: 40px 25px;
+	box-sizing: border-box;
+}
+.hotel_txt span{
+	font-size: 17px;
+	font-weight: 900;
+	margin-right: 10px;
+}
+.hotel_txt ul{
+	display: inline-block;
+}
+.hotel_txt ul li{
+	display: inline-block;
+	font-size: 15px;
+	background-color: #17B7D0;
+	padding: 2px 7px;
+	color: #fff;
+}
+.hotel_txt p{
+	font-size: 26px;
+	font-weight: 900;
+	margin-top: 15px;
+}
+
+.reservation{
+	float: right;
+	width: 592px;
+	margin-top: 165px;
+}
+.reservation h2{
+	font-family: 'NEXON Lv2 Gothic';
+	font-size: 35px;
+	color: #343434;
+	margin-bottom: 40px;
+}
+.reservation_form{
+	overflow: hidden;
+}
+.reservation_form li{
+	border: 1px solid #979696;
+	height: 66px;
+	position: relative;
+	margin-bottom: 14px;
+}
+.reservation_form li:nth-child(2){
+	float: left;
+	width: 286px;
+}
+.reservation_form li:nth-child(3){
+	float: right;
+	width: 286px;
+}
+.reservation_form p{
+	font-size: 15px;
+	color: #17B7D0;
+	position: absolute;
+	top: 10px;
+	left: 12px;
+}
+.reservation_form li input{
+	width: 566px;
+    font-family: 'NEXON Lv1 Gothic OTF';
+	font-size: 19px;
+	font-weight: 900;
+	position: absolute;
+	top: 34px;
+	left: 12px;
+    border: none;
+	outline: none;
+}
+.reservation_form li:nth-child(3) input{
+	width: 260px;
+}
+.reservation_form li input::placeholder{
+	color: #A5A5A5 ;
+}
+.reservation_form li:nth-child(1) .input_color::placeholder{
+	color: #707070;
+}
+.reservation_form li:nth-child(2) input{
+	width: 110px;
+}
+.reservation_form li .day2{
+	position: absolute;
+	left: 140px;
+}
+.reservation_form li:nth-child(2) span{
+    font-size: 19px;
+	font-weight: 900;
+	color: #A5A5A5;
+	position: absolute;
+	top: 35px;
+	left: 124px;
+}
+.reservation_search{
+	font-size: 22px;
+	color: #fff;
+	background-color: #17B7D0;
+	display: block;
+	height: 50px;
+    padding-top: 16px;
+	box-sizing: border-box;
+    margin-top: 26px;
+}

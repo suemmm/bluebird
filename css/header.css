@@ -33,3 +33,7 @@
 #gnb li a:hover{
     color: #AAAAAA;
 }
+#gnb li a.on{
+    display: block;
+    color: #AAAAAA;
+}

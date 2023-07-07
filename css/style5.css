@@ -1,0 +1,191 @@
+@charset "UTF-8";
+@font-face {
+    font-family: 'NEXON Lv1 Gothic OTF';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'NEXON Lv2 Gothic';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv2 Gothic.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+ul, ol{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: #343434;
+}
+body{
+    min-width: 1260px;
+    font-family: 'NEXON Lv1 Gothic OTF';
+    font-size: 14px;
+    line-height: 1.5em;
+    color: #343434;
+}
+
+/*cate*/
+.sub_cate{
+	background-repeat: no-repeat;
+	background-position: center;
+	height: 430px;
+	text-align: center;
+}
+.sub5_cate{
+	background-image: url(../images/sub5_cate_bg.svg);
+}
+.sub_cate p{
+	font-size: 42px;
+	font-weight: 900;
+	color: #fff;
+	display: inline-block;
+}
+.vertical_m{
+	display: inline-block;
+	height: 430px;
+	vertical-align: middle;
+}
+
+/*winner*/
+.winner_wrap{
+    height: 100px;
+    border-bottom: 1.5px solid #17B7D0;
+    color: #17B7D0;
+}
+.winner{
+    margin: 0 auto;
+    width: 1200px;
+}
+.winner p{
+    float: left;
+    font-size: 25px;
+    margin-top: 40px;
+}
+.winner a{
+    display: block;
+    float: right;
+    background-color: #17B7D0;
+    color: #fff;
+    font-size: 20px;
+    padding: 14px 41px;
+    border-radius: 50px;
+    margin-top: 25px;
+}
+.winner a:hover{
+    font-weight: 900;
+}
+
+/*section1*/
+#sub5_section1_wrap{
+	height: 1306px;
+    border-bottom: 1.5px solid #979696;
+}
+.sub_section{
+	margin: 0 auto;
+	width: 1200px;
+	text-align: center;
+	color: #979696;
+}
+.sub_title{
+	font-size: 24px;
+	font-weight: 900;
+	padding-top: 170px;
+	color: #343434;
+}
+.sub_title span{
+	color: #17B7D0;
+}
+.sub_title_underline{
+	background-color: #17B7D0;
+	width: 60px;
+	height: 5px;
+	border-radius: 50px;
+	display: inline-block;
+	margin: 15px 0 65px;
+}
+.event li{
+    float: left;
+    font-family: 'NEXON Lv2 Gothic';
+    font-weight: 900;
+}
+.event li:nth-child(2), .ongoing_event li:nth-child(5){
+    margin: 0 19px;
+}
+.event li a{
+    display: block;
+    margin-bottom: 28px;
+}
+.event_title{
+    font-size: 18px;
+}
+.event_title span{
+    font-size: 23px;
+    color: #17B7D0;
+    display: inline-block;
+    margin-bottom: 8px;
+}
+.event_date{
+    font-size: 15px;
+    color: #B8B5B5;
+    margin-top: 18px;
+}
+.ongoing_event li:nth-child(4), .ongoing_event li:nth-child(5), .ongoing_event li:nth-child(6){
+    margin-top: 95px;
+}
+.event_more{
+	display: inline-block;
+	width: 125px;
+	height: 45px;
+	font-size: 20px;
+	color: #fff;
+	background-color: #17B7D0;
+	border-radius: 70px;
+	padding: 11px;
+	box-sizing: border-box;
+	margin-top: 75px;
+}
+.event_more:hover{
+    font-weight: 900;
+}
+
+/*section2*/
+#sub5_section2{
+    height: 774px;
+}
+#sub5_section2 .sub_title{
+    padding-top: 95px;
+}
+.cover_wrap{
+    position: relative;
+}
+.cover{
+    width: 387px;
+    height: 238px;
+    background-color: rgba(0, 0, 0, 0.9);
+    padding-top: 58px;
+    box-sizing: border-box;
+    color: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9;
+}
+.txt_title{
+    font-size: 26px;
+    margin-top: 12px;
+}
+.txt_title span{
+    font-weight: 100;
+}
+.txt_sub{
+    font-weight: 100;
+    font-size: 12px;
+    line-height: 16px;
+    margin-top: 12px;
+}

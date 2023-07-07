@@ -1,29 +1,160 @@
-<!DOCTYPE html>
+<!DOCTYPE html> <!--회사소개-->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=1200">
+    <meta name="viewport" content="width=1260">
     <title>bluebird</title>
-    <link rel="icon" type="image/png" sizes="32x32" href="../sub1/images/favicon_32x32.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon_32x32.png">
 
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="../../css/header.css">
-    <link rel="stylesheet" href="../../css/footer.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/swiper-bundle.min.css"> <!--swiper_css-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> <!--aos_css-->
 </head>
 <body>
     <div id="header"> <!--header_S-->
         <h1 class="logo">
-            <a href="index.html"><img src="images/logo.png" alt="logo"></a>
+            <a href="../index.html"><img src="../images/logo.png" alt="logo"></a>
         </h1>
         <ul id="gnb">
-            <li><a href="javascript:return false;">회사소개</a></li>
-            <li><a href="javascript:return false;">LOCAL 커뮤니티</a></li>
-            <li><a href="javascript:return false;">여행상품</a></li>
-            <li><a href="javascript:return false;">항공권&숙소</a></li>
-            <li><a href="javascript:return false;">이벤트</a></li>
+            <li><a href="sub1.html" class="on">회사소개</a></li>
+            <li><a href="sub2.html">LOCAL커뮤니티</a></li>
+            <li><a href="sub3.html">여행상품</a></li>
+            <li><a href="sub4.html">항공권&숙소</a></li>
+            <li><a href="sub5.html">이벤트</a></li>
         </ul>
     </div> <!--header_E-->
+
+    <div class="sub_cate sub1_cate"> <!--cate_S-->
+        <p>About Us</p>
+        <p class="vertical_m"></p>
+    </div> <!--cate_E-->
+
+    <div id="sub1_section1_wrap"> <!--section1_S-->
+        <div id="sub1_section1" class="sub_section">
+            <div>
+                <div class="sub_title">MISSION</div>
+                <div class="sub_title_underline"></div>
+            </div>
+            <div class="sub_title_add">어디로 떠나든, 언제 떠나든, bluebird는 여행지 주변의 행복을 찾아드립니다</div>
+            <div data-aos="zoom-in" data-aos-duration="1500">
+                <img src="../images/sub1_www.svg" alt="www">
+            </div>
+            <div class="www_txt"><img src="../images/sub1_www_txt.png" alt="www_txt"></div>
+        </div>
+    </div> <!--section1_E-->
+
+    <div id="sub1_section2" class="sub_section"> <!--section2_S-->
+        <div>
+            <div class="sub_title">CORE VALUE</div>
+            <div class="sub_title_underline"></div>
+        </div>
+        <ul>
+            <li>
+                <div data-aos="flip-left" data-aos-duration="1000">
+                    <img src="../images/sub1_section2_free.svg" alt="free">
+                </div>
+                <p class="core">free</p>
+                <p class="core_txt">
+                    어디를 가든, 언제 가든 <br>
+                    구애받지 않고 <br>
+                    자유로운 여행이 되도록
+                </p>
+            </li>
+            <li>
+                <div data-aos="flip-left" data-aos-duration="1500">
+                    <img src="../images/sub1_section2_local.svg" alt="local">
+                </div>
+                <p class="core">local</p>
+                <p class="core_txt">
+                    여행지 주변 <br>
+                    '현지의' 매력이 가득한 <br>
+                    장소를 발견하도록
+                </p>
+            </li>
+            <li>
+                <div data-aos="flip-left" data-aos-duration="2000">
+                    <img src="../images/sub1_section2_friendly.svg" alt="friendly">
+                </div>
+                <p class="core">friendly</p>
+                <p class="core_txt">
+                    전세계 네트워크망을 통해 <br>
+                    다양한 친구들을 만나고, <br>
+                    그들과 편하게 소통하도록 
+                </p>
+            </li>
+        </ul>
+    </div> <!--section2_E-->
+
+    <div id="sub1_section3" class="sub_section"> <!--section3_S-->
+        <div>
+            <div class="sub_title">CI</div>
+            <div class="sub_title_underline"></div>
+        </div>
+        <div class="sub_title_add">bluebird의 디자인은 <span>'우리 주변 가까이 행복이 있다'</span>라는 파랑새의 의미를 담고 있습니다.</div>
+        <div class="ci_logo">
+            <div class="ci_title">logo</div>
+            <ul>
+                <li>
+                    <div data-aos="fade-up-right" data-aos-duration="1500"><img src="../images/sub1_section3_logo(h).svg" alt="logo(h)"></div>
+                    <p>horizontal ver</p>
+                </li>
+                <li>
+                    <div data-aos="fade-up-left" data-aos-duration="1500"><img src="../images/sub1_section3_logo(v).svg" alt="logo(v)"></div>
+                    <p>vertical ver</p>
+                </li>
+            </ul>
+            <div class="ci_txt">
+                <p>
+                    심볼의 청록색 그라데이션은 날아오르는 듯한 파랑새의 모습을 나타내어 <br>
+                    세계 어느 곳이든 자유롭게 떠날 수 있다는 여행의 설렘을 상징적으로 표현하고 있습니다. 
+                </p>
+                <p>
+                    둥근 폰트는 친밀한 느낌을 줌과 동시에 다양한 뭉게구름들을 상징하고 있고, <br>
+                    소문자로 나타낸 b와 d는 새의 부리 및 날개를 상징하고 있습니다. 
+                </p>
+            </div>
+        </div>
+        <div class="ci_color">
+            <div class="ci_title">color system</div>
+            <ul>
+                <li><p>#17B7D0</p></li>
+                <li><p>#28B9AD</p></li>
+                <li><p>#D5F1F8</p></li>
+            </ul>
+        </div>
+    </div> <!--section3_E-->
+
+    <div id="sub1_section4" class="sub_section"> <!--section4_S-->
+        <div>
+            <div class="sub_title">MAP</div>
+            <div class="sub_title_underline"></div>
+        </div>
+        <ul>
+            <li>
+                <strong>ADDRESS</strong>
+                서울시 성동구 뚝섬로 273, 블루버드 빌딩
+            </li>
+            <li>
+                <strong>CONTACT</strong>
+                고객센터 : 1577-0506
+            </li>
+            <li>
+                마케팅&제휴 : crm@bluebird.com <br>
+                IR : IR@bluebird.com <br>
+                채용 : recruit@bluebird.com
+            </li>
+        </ul>
+        <div class="ani">
+            <img src="../images/sub1_section4_ani.png" alt="ani">
+        </div>
+    </div> <!--section4_E-->
+
+    <div class="map"> <!--map_S-->
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15048.363943586855!2d127.04540276268084!3d37.54260282602518!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca37d51f4f62b%3A0xdd9b9865be0f469a!2z7ISc7Jq47Iiy6rO17JuQ!5e0!3m2!1sko!2skr!4v1686625343957!5m2!1sko!2skr" width="100%" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div> <!--map_E-->
 
     <div id="footer"> <!--footer_S-->
         <div class="notice_sns_wrap">
@@ -45,10 +176,10 @@
                     <a href="javascript:return false;" class="notice_underline">더보기</a>
                 </div>
                 <ul class="sns">
-                    <li><a href="javascript:return false;"><img src="images/footer_sns_facebook.png" alt="facebook"></a></li>
-                    <li><a href="javascript:return false;"><img src="images/footer_sns_insta.png" alt="insta"></a></li>
-                    <li><a href="javascript:return false;"><img src="images/footer_sns_youtube.png" alt="youtube"></a></li>
-                    <li><a href="javascript:return false;"><img src="images/footer_sns_kakao.png" alt="kakao"></a></li>
+                    <li><a href="javascript:return false;"><img src="../images/footer_sns_facebook.png" alt="facebook"></a></li>
+                    <li><a href="javascript:return false;"><img src="../images/footer_sns_insta.png" alt="insta"></a></li>
+                    <li><a href="javascript:return false;"><img src="../images/footer_sns_youtube.png" alt="youtube"></a></li>
+                    <li><a href="javascript:return false;"><img src="../images/footer_sns_kakao.png" alt="kakao"></a></li>
                 </ul>
             </div>
         </div>
@@ -61,5 +192,29 @@
             <span>COPYRIGHTⓒ BLUEBIRD SERVICE INC. ALL RIGHTS RESERVED</span>
         </div>
     </div> <!--footer_E-->
+
+    <!--js-->
+
+    <!--aos-->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+    <!--notice-->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper2", {
+            direction: "vertical",
+            slidesPerView: 1,
+            spaceBetween: 30,
+            autoplay: {     //자동슬라이드 (false-비활성화)
+                delay: 2500, // 시간 설정
+                disableOnInteraction: false, // false-스와이프 후 자동 재생
+                },
+                loop : true,   // 슬라이드 반복 여부
+                loopAdditionalSlides : 1
+        });
+    </script>
 </body>
 </html>
