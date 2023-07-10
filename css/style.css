@@ -1155,16 +1155,19 @@ input::-webkit-search-results-decoration{
 }
 #sub2_section1 ul li{
 	float: left;
-	width: 350px;
-	position: relative;
+	width: 353px;
 }
 #sub2_section1 ul li:nth-child(2){
-	margin: 0 72px;
+	margin: 0 69px;
 }
 #sub2_section1 ul li a{
 	display: block;
 	border: 1.5px solid #17B7D0;
+	position: relative;
 }
+/* #sub2_section1 ul li a div img{
+	display: block;
+} */
 .icon_medal{
 	position: absolute;
 	top: 0;
