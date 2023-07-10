@@ -1109,6 +1109,10 @@ input::-webkit-search-results-decoration{
 	font-weight: 900;
 	margin: 5px 0 15px;
 }
+.ani_wrap{
+	width: 100%;
+	overflow: hidden;
+}
 .ani{
 	position: absolute;
 	top: 160px;
