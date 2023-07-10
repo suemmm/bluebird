@@ -1151,9 +1151,8 @@ input::-webkit-search-results-decoration{
 	color: #17B7D0;
 }
 #sub2_section1 ul{
-	height: 540px;
 	margin-top: 105px;
-	/* overflow: hidden; */
+	overflow: hidden;
 }
 #sub2_section1 ul li{
 	float: left;
