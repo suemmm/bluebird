@@ -1143,6 +1143,9 @@ input::-webkit-search-results-decoration{
 }
 
 /*section1*/
+#sub2_section1{
+	overflow: hidden;
+}
 .sub_title span{
 	color: #17B7D0;
 }
@@ -1152,6 +1155,7 @@ input::-webkit-search-results-decoration{
 }
 #sub2_section1 ul li{
 	float: left;
+	width: 350px;
 	position: relative;
 }
 #sub2_section1 ul li:nth-child(2){
