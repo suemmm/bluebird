@@ -1071,6 +1071,9 @@ input::-webkit-search-results-decoration{
 }
 
 /*section4*/
+#sub1_section4_wrap{
+	overflow: hidden;
+}
 #sub1_section4{
 	position: relative;
 }
@@ -1108,10 +1111,6 @@ input::-webkit-search-results-decoration{
 	font-size: 24px;
 	font-weight: 900;
 	margin: 5px 0 15px;
-}
-.ani_wrap{
-	width: 1200px;
-	overflow: hidden;
 }
 .ani{
 	position: absolute;
