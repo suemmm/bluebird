@@ -401,12 +401,12 @@ input::-webkit-search-results-decoration{
 	color: #707070;
 }
 .section2_quick .input .day{
-	width: 90px;
+	width: 83px;
 }
 .section2_quick .input .day2{
 	position: absolute;
 	top: 25px;
-	left: 110px;
+	left: 107px;
 }
 .section2_quick ul li:nth-child(3) div.input span{
 	font-size: 14px;
@@ -414,7 +414,7 @@ input::-webkit-search-results-decoration{
 	color: #A5A5A5;
 	position: absolute;
 	top: 23px;
-	left: 98px;
+	left: 93px;
 }
 .section2_search{
 	font-size: 15px;
@@ -1159,9 +1159,11 @@ input::-webkit-search-results-decoration{
 	width: 350px;
 	border: 1.5px solid #17B7D0;
 	position: relative;
+	box-sizing: border-box;
+	overflow: hidden;
 }
 #sub2_section1 ul li:nth-child(2){
-	margin: 0 70.5px;
+	margin: 0 75px;
 }
 #sub2_section1 ul li a div img{
 	display: inline-block; /**/

@@ -138,11 +138,11 @@ body{
 	color: #707070;
 }
 .airline_form .input .day{
-	width: 130px;
+	width: 140px;
 }
 .airline_form .input .day2{
 	position: absolute;
-	left: 165px;
+	left: 175px;
 }
 .airline_form li:nth-child(3) .input span{
     font-size: 23px;
@@ -150,7 +150,7 @@ body{
 	color: #A5A5A5;
 	position: absolute;
 	top: 40px;
-	left: 147px;
+	left: 152px;
 }
 .airline_search{
 	font-size: 22px;
@@ -411,11 +411,11 @@ input::-webkit-search-results-decoration{
 	color: #707070;
 }
 .reservation_form li:nth-child(2) input{
-	width: 110px;
+	width: 113px;
 }
 .reservation_form li .day2{
 	position: absolute;
-	left: 140px;
+	left: 146px;
 }
 .reservation_form li:nth-child(2) span{
     font-size: 19px;
@@ -423,7 +423,7 @@ input::-webkit-search-results-decoration{
 	color: #A5A5A5;
 	position: absolute;
 	top: 35px;
-	left: 124px;
+	left: 126px;
 }
 .reservation_search{
 	font-size: 22px;
