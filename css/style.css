@@ -401,12 +401,12 @@ input::-webkit-search-results-decoration{
 	color: #707070;
 }
 .section2_quick .input .day{
-	width: 85px;
+	width: 86px;
 }
 .section2_quick .input .day2{
 	position: absolute;
 	top: 25px;
-	left: 111px;
+	left: 112px;
 }
 .section2_quick ul li:nth-child(3) div.input span{
 	font-size: 14px;
@@ -414,7 +414,7 @@ input::-webkit-search-results-decoration{
 	color: #A5A5A5;
 	position: absolute;
 	top: 23px;
-	left: 95px;
+	left: 96px;
 }
 .section2_search{
 	font-size: 15px;
